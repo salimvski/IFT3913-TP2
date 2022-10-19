@@ -1,4 +1,7 @@
+package utils;
+
 import java.io.*;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -39,9 +42,9 @@ public class Utils {
         return resultList;
     }
 
-    public static boolean isValidPath(String path) {
+    public static boolean isValidPath(Path path) {
         // Return true if given path is valid, else return false
-        File file = new File(path);
+        File file = new File(String.valueOf(path));
         if (file.isDirectory() || file.isFile() || file.canRead() || file.canWrite()){
             return true;
         }
@@ -53,7 +56,7 @@ public class Utils {
     public static String getPackName(String path) throws IOException {
         // if class is in some package, return package name as String
 
-        if(isValidPath(path) == false){
+        if(isValidPath(Path.of(path)) == false){
             System.out.println("Path might be invalid");
             throw new FileNotFoundException("Invalid Path");
         }
