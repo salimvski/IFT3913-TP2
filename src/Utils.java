@@ -1,10 +1,14 @@
-import java.io.File;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Utils {
-    
+
+    private Utils() {
+        throw new IllegalStateException("Utility class");
+    }
+
     private static String getFileExtension(File file){
         // Return extension of given file
         String extension = "";
@@ -36,7 +40,7 @@ public class Utils {
     }
 
     public static boolean isValidPath(String path) {
-
+        // Return true if given path is valid, else return false
         File file = new File(path);
         if (file.isDirectory() || file.isFile() || file.canRead() || file.canWrite()){
             return true;
@@ -44,5 +48,40 @@ public class Utils {
         else {
             return false;
         }
+    }
+
+    public static String getPackName(String path) throws IOException {
+        // if class is in some package, return package name as String
+
+        if(isValidPath(path) == false){
+            System.out.println("Path might be invalid");
+            throw new FileNotFoundException("Invalid Path");
+        }
+
+        String pack = "";
+        BufferedReader br;
+        try {
+            br = new BufferedReader(new FileReader(path));
+        }catch (Exception e){
+            System.out.println("Mauvais chemin vers le fichier.");
+            return "";
+        }
+        try {
+            String line = br.readLine();
+
+            while (line != null) {
+                if(line.split(" ").length != 0) {
+                    if (line.split(" ")[0].equals("package")) {
+                        pack = line.split(" ")[1].split(";")[0];
+                    }
+                }else {
+                    return "";
+                }
+                line = br.readLine();
+            }
+        } finally {
+            br.close();
+        }
+        return pack;
     }
 }
