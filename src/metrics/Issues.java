@@ -52,7 +52,7 @@ public class Issues {
             String str = responseContent.toString();
             String result = str.substring(str.indexOf("{\"") + 1, str.indexOf(","));
 //          System.out.println(result);
-            return Integer.valueOf(Arrays.toString(result.split(":")));
+            return Integer.valueOf(result.split(":")[1]);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

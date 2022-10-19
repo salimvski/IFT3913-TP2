@@ -26,4 +26,17 @@ public class Age {
 
         return df.format(attr.lastModifiedTime().toMillis());
     }
+
+    public static String getCreationDate (Path filePath) throws IOException {
+        // Return last modified time of given file
+        if (Utils.isValidPath(filePath) == false){
+            System.out.println("Path might be invalid");
+            throw new FileNotFoundException("Invalid Path");
+        }
+        BasicFileAttributes attr = Files.readAttributes(filePath, BasicFileAttributes.class);
+
+        SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+
+        return df.format(attr.creationTime().toMillis());
+    }
 }
