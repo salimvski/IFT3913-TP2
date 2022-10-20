@@ -93,8 +93,27 @@ Metrique :
   les tests (OTS tools, GCP, sourceMonitor). On doit obtenir une moyenne de taille
   de methode par class/package
 
-- Couplage/Cohesion CSEC TP1 ??
-- Issues  TODO
+- Couplage/
+
+- Issues
+
+  Question: Q3, Q4.
+
+  D'abord, notre objectif etait d'utiliser Sonar Qube Webservices pour
+  recuperer le nombre total de bug, mais nous avons eu quelques complications, c'est
+  donc par ce premier objectif que nous nous sommes dit qu'on allait recuperer le
+  nombre de problemes signales sur le projet lui meme, par ses propres utilisateurs,
+  le nombre d'Issue d'un project ne reflete pas forcement sa qualite, donc, on a
+  decide de recuperer tous les Issues avec le label "bug", qui s'avere, au final plus
+  utile que Sonar Qube. Si un projet contient des bugs non regles, alors faire des tests
+  autos et sa maturite posent des problemes. Il suffit de se donner un seuil, en fonction du projet,
+  pour connaitre le taux d'acceptation de bugs. Pour nous, un projet comme celui-ci ne devrait pas
+  contenir de bug, vu son ampleur.
+
+  Afin de mesurer cette metrique, nous avons nous meme implemente la classe, en utilisant la docu
+  de l'API de Github.
+
+
 - nb classe par package TODO 
 - Age du fichier
 

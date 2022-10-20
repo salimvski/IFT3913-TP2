@@ -1,10 +1,17 @@
 package utils;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Utils {
 
@@ -86,5 +93,59 @@ public class Utils {
             br.close();
         }
         return pack;
+    }
+
+    private static HttpURLConnection conn;
+    public static String getRequest(String URL) {
+
+        BufferedReader reader;
+        String line;
+        StringBuilder responseContent = new StringBuilder();
+        try{
+            java.net.URL url =
+                    new URL(URL);
+            conn = (HttpURLConnection) url.openConnection();
+
+            // Request setup
+            conn.setRequestMethod("GET");
+            conn.setConnectTimeout(5000);// 5000 milliseconds = 5 seconds
+            conn.setReadTimeout(5000);
+
+            // Test if the response from the server is successful
+            int status = conn.getResponseCode();
+
+            if (status >= 300) {
+                reader = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
+                while ((line = reader.readLine()) != null) {
+                    responseContent.append(line);
+                }
+                reader.close();
+            }
+            else {
+                reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                while ((line = reader.readLine()) != null) {
+                    responseContent.append(line);
+                }
+                reader.close();
+            }
+
+//          System.out.println("response code: " + status);
+            String r = responseContent.toString();
+
+            return  r;
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            conn.disconnect();
+        }
+        // if error, return -1
+        return "-1";
+    }
+
+    public static List<String> getValuesForGivenKey(String jsonArrayStr, String key) {
+        JSONArray jsonArray = new JSONArray(jsonArrayStr);
+        return IntStream.range(0, jsonArray.length())
+                .mapToObj(index -> ((JSONObject)jsonArray.get(index)).optString(key))
+                .collect(Collectors.toList());
     }
 }
