@@ -1,0 +1,100 @@
+- Completer, plan evaluation de qualite du projet JFreeChart
+- objectif-question-metrique GQM
+
+- Objectif :
+  - analyser la derniere version du code (branche master du JFreeChart)
+  - afin d'evaluer son niveau de maintenabilite, (POV chef du projet)
+  
+- Tache 1:
+  TODO :
+    - Completer le plan GQM 
+    - 2 metriques par question (minimum) 
+    - max 9 metriques uniques
+
+
+Metrique :
+
+- Pourquoi vous pensez que chacune est appropriee et rentable
+- Comment prevoyez-vous de la mesurer
+
+1) - Ratio taille code / taille test
+
+  Question : Q3, Q4
+
+  Nous avons choisi cette metrique pour avoir une bonne idee sur la qualite
+  des test, ou on suppose que plus le code est complexe plus les test sont consequents
+  C'est une metrique approprie pour le projet JFreechart pour avoir une idee sur la 
+  qualite des fichiers tests. Cette metrique semble etre aussi simple a mesurer
+  et 100% automatisable.
+
+  Afin de mesurer cette metrique nous allons faire le Ratio taille code / taille test
+  pour class associee a la taille du fichier test.
+
+2) - Test par classe
+
+  Question: Q4, Q3
+
+  Nous avons choisi cette metrique car il est important d'avoir un bon nombre
+  de tests pour tester le code, afin de detecter rapidement les bugs lors de la phase
+  developpement d'un projet mais aussi la phase post-developpement d'un projet.
+  Cependant, il faut eviter d'avoir beaucoup de test pour des fichier ayant tres
+  peu de ligne de code. Cela pourrait baisser la qualite du processus de test.
+  Comme JFreeChart semble avoir beaucoup de class il est pertinent de verifier si
+  il y a suffisement de test pour chaque package/class.
+
+  Afin de mesurer cette metrique nous pouvons utiliser des outils externes comme
+  (GCP) ou bien faire un programme qui voit que est-ce que pour chaque class il ya 
+  au moins un fichier test correspondant.
+
+
+
+
+
+3) - Complexite cyclomatique
+
+  Question: Q3, Q2, Q4
+
+  Nous avons choisi cette metrique car il est bon de connaitre la complexite 
+  cyclomatique de chaque methode d'une class. Il est pertinent de choisir cette
+  metrique car du code avec une importante complexite est difficile a test
+  et pourrait entrainer des erreurs. Nous avons choisi cette metrique aussi 
+  car les tests peuvent etre 100% automatises.
+
+  Pour ce faire nous pouvons utiliser des outils externes comme (GCP, sourceMonitor)
+  ou bien creer un script qui calcul la CC pour chaque methode de chaque class
+
+
+4) - Quantite de commentaire / taille du fichier (documentation/complexite) metric DC
+
+  Question: Q1, Q3
+
+  Nous avons choisi cette metrique parce que c'est bon d'avoir des commentaires 
+  permettant d'expliquer la complexite d'un code. Surtout quand un nouveau
+  developpeur desire travailler sur le projet il gagnera beaucoup en lisant les
+  les commentaires du code. 
+  Pour mesurer cette metrique nous allons mesurer le pourcentage de commentaires
+  par class. Nous allons diviser le nombre de commentaires par le nombre total 
+  de ligne de code. Ceci nous donnera un bon indicateur, ou plus il y a de ligne
+  de code plus il y a de commentaires.
+
+
+5) - taille methode/class dans chaque fichier (halstead metrics too, documentation)
+
+  Question: Q1, Q3
+
+  Nous avons choisi cette metrique parce que c'est un tres bon indicateur
+  sur le complexite du code. En effet, Il est preferable d'avoir un grand nombre
+  de petite methodes au lieu de peu de methodes mais de tres longue taille. Ainsi,
+  l'analyse du code ce fera de maniere tres facile par des nouvelles personnes 
+  par exemple, il est facile de se perdre dans des fonctions qui font des centaines
+  et des centaines de lignes de codes.
+
+  Afin de mesurer cette metrique, il y a des outils sur internet afin d'automatiser
+  les tests (OTS tools, GCP, sourceMonitor). On doit obtenir une moyenne de taille
+  de methode par class/package
+
+- Couplage/Cohesion CSEC TP1 ??
+- Issues  TODO
+- nb classe par package TODO 
+- Age du fichier
+
