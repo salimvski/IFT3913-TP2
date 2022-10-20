@@ -7,6 +7,9 @@ import utils.Utils;
 public class Issues {
 
     public static Integer getBugIssues(String URL) {
+
+        //TODO : Ask for USER and REPO only instead of URL to simplify
+
         // Use Github API to return number of opened issues labeled as bug
         // DOC : https://docs.github.com/en/rest/issues
 

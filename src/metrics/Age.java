@@ -1,11 +1,9 @@
 package metrics;
 
-import org.json.JSONArray;
 import utils.Utils;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.attribute.BasicFileAttributes;
@@ -43,7 +41,10 @@ public class Age {
     }
 
     public static int getLastYearCommitCount (String URL){
-        // Check if project is active
+
+        //TODO : Ask for USER and REPO only instead of URL to simplify
+
+        // Returns number of commits of project last year
 
         // DOC : https://docs.github.com/en/rest/metrics/statistics#get-the-last-year-of-commit-activity
         // URL for jfree is : https://api.github.com/repos/jfree/jfreechart/stats/commit_activity

@@ -12,8 +12,8 @@ public class TPC {
         return classList.size();
     }
 
-    public static int getTPC (int classNum, int testClassNum){
+    public static int getTPC (int classCount, int testClassCount){
         // En fonction du ratio, et du seuil fixé, on peut valider ou non
-        return classNum / testClassNum;
+        return classCount / testClassCount;
     }
 }

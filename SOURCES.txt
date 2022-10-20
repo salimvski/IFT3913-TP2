@@ -1,0 +1,22 @@
+Metrics : 
+- https://quandarypeak.com/2015/02/measuring-software-maintainability/
+
+Github API : 
+- https://docs.github.com/en
+
+
+Is the project aged enough ? 
+- https://softwareengineering.stackexchange.com/questions/189989/how-to-know-if-an-open-source-project-is-mature-enough-to-use-in-a-product
+
+
+Test coverage :
+- https://stackoverflow.com/questions/90002/what-is-a-reasonable-code-coverage-for-unit-tests-and-why
+
+Code related : 
+- https://www.baeldung.com/java-jsonarray-get-value-by-key
+- https://stackoverflow.com/questions/9268099/json-array-get-length
+- https://medium.com/javarevisited/how-to-send-http-get-request-and-parse-json-data-into-string-using-java-3c0cf7eeebbc
+
+
+
+

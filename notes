@@ -43,8 +43,8 @@ Metrique :
   il y a suffisement de test pour chaque package/class.
 
   Afin de mesurer cette metrique nous pouvons utiliser des outils externes comme
-  (GCP) ou bien faire un programme qui voit que est-ce que pour chaque class il ya 
-  au moins un fichier test correspondant.
+  (GCP) ou bien faire un programme qui nous retourne si les le test coverage est acceptable
+  pour un certain seuil.
 
 
 
@@ -80,7 +80,7 @@ Metrique :
 
 5) - taille methode/class dans chaque fichier (halstead metrics too, documentation)
 
-  Question: Q1, Q3
+  Question: Q1
 
   Nous avons choisi cette metrique parce que c'est un tres bon indicateur
   sur le complexite du code. En effet, Il est preferable d'avoir un grand nombre
@@ -99,21 +99,27 @@ Metrique :
 
   Question: Q3, Q4.
 
-  D'abord, notre objectif etait d'utiliser Sonar Qube Webservices pour
-  recuperer le nombre total de bug, mais nous avons eu quelques complications, c'est
-  donc par ce premier objectif que nous nous sommes dit qu'on allait recuperer le
-  nombre de problemes signales sur le projet lui meme, par ses propres utilisateurs,
-  le nombre d'Issue d'un project ne reflete pas forcement sa qualite, donc, on a
-  decide de recuperer tous les Issues avec le label "bug", qui s'avere, au final plus
-  utile que Sonar Qube. Si un projet contient des bugs non regles, alors faire des tests
-  autos et sa maturite posent des problemes. Il suffit de se donner un seuil, en fonction du projet,
-  pour connaitre le taux d'acceptation de bugs. Pour nous, un projet comme celui-ci ne devrait pas
-  contenir de bug, vu son ampleur.
+  Au depart, notre objectif etait d'utiliser Sonar Qube Webservices pour
+  recuperer le nombre total de bugs, mais nous avons eu quelques complications,
+  c'est donc par ce premier objectif que nous nous sommes dit qu'on allait
+  recuperer lenombre de problemes signales sur le projet lui meme, par ses
+  propres utilisateurs, le nombre d'Issue d'un project ne reflete pas forcement
+  sa qualite, donc, on a decide de recuperer tous les Issues avec le label "bug",
+  qui s'avere, au final plus utile que Sonar Qube. Si un projet contient des bugs
+  non regles, alors faire des tests autos et sa maturite posent des problemes.
+  Il suffit de se donner un seuil, en fonction du projet, pour connaitre le taux
+  d'acceptation de bugs.
 
-  Afin de mesurer cette metrique, nous avons nous meme implemente la classe, en utilisant la docu
-  de l'API de Github.
+  Afin de mesurer cette metrique, nous avons nous meme implemente la classe, en
+  utilisant la docu de l'API de Github.
 
 
-- nb classe par package TODO 
 - Age du fichier
+
+  Question: Q3
+
+  Cette metrique nous permet de savoir plus ou moins la frequence de maintenance
+  du projet, on peut compter le nombre de commit dans l'annee, et aussi savoir de
+  quand date le dernier commit sur la branche Main du repo, si un projet est encore
+  maintenu convenablement par la communaute.
 
