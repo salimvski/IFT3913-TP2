@@ -93,9 +93,20 @@ Metrique :
   les tests (OTS tools, GCP, sourceMonitor). On doit obtenir une moyenne de taille
   de methode par class/package
 
-- Couplage/
+6) - Cohesion/
 
-- Issues
+  Question : Q2, Q3
+
+  Nous avons choisi cette metrique car la cohesion entre les modules a un 
+  impact direct sur la qualite du code ainsi que la maintainabilite. Une haute
+  cohesion permet un maintien plus facile car cela reduit la duplication de code
+  et on peut facilement modifier le code. 
+
+  Afin de mesurer cette metrique, nous pouvons utiliser des outils externes comme
+  (GCP, Jhawk). Plus la cohesion sera haute plus cela indique que le code est modulaire
+  et plus simple a maintenir.
+
+7) - Issues
 
   Question: Q3, Q4.
 
@@ -114,7 +125,7 @@ Metrique :
   utilisant la docu de l'API de Github.
 
 
-- Age du fichier
+8) - Age du fichier
 
   Question: Q3
 
@@ -122,4 +133,19 @@ Metrique :
   du projet, on peut compter le nombre de commit dans l'annee, et aussi savoir de
   quand date le dernier commit sur la branche Main du repo, si un projet est encore
   maintenu convenablement par la communaute.
+
+9) - Duplicat de code
+
+  Question : Q2, Q3
+
+  Cette metrique permet d'avoir une idee sur la complexite de la modularite du code.
+  En effet, plus il y aura de la duplication de code plus le code sera complexe
+  a maintenir. Techniquement une bonne modularite implique tres peu de duplicat de
+  code. Ainsi, il est interessant de mesurer cette metrique pour avoir une idee
+  sur la maintenabilite du code, d'autant plus qu'elle semble rentable et 100%
+  automatisable. Par ailleurs, cette metrique n'est pas des plus pertinentes bien
+  qu'elle sert toujours pour avoir une idee sur la complexite du code.
+
+  Pour mesurer cette metrique, on pourrait utiliser des outils externes tel que,
+  GCP
 
