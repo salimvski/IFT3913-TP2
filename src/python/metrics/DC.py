@@ -22,16 +22,14 @@ def dcMetric():
                 for v in range(lineCount, len(lines)):
                     tmp = lines[v]
                     tmp = tmp.replace(" ", "")     
-                    tmp = tmp.replace("\n", "") 
-                    if tmp[2:] == "*/":
-                        break            
+                    tmp = tmp.replace("\n", "")           
                     if tmp[:1] == "*":
                         comments += 1                 
                     if tmp[:2] == "*/" or tmp == "*/":
                         break
             else:
                 lineCount += 1
-        print(comments)
+        print("Comment density of {} is : {:.2f}".format(filename, comments/lineCount))
 
 dcMetric()
 
