@@ -2,6 +2,7 @@
 # How to run : python3 DC.py <file.java>
 # Output : <number of comments in file.java>
 import sys
+import inspect
 
 def dcMetric():
     try:
@@ -21,26 +22,21 @@ def dcMetric():
                 comments += 1
                 for v in range(lineCount, len(lines)):
                     tmp = lines[v]
-                    tmp = tmp.replace(" ", "")     
-                    tmp = tmp.replace("\n", "")           
+                    tmp = tmp.replace(" ", "")
+                    tmp = tmp.replace("\n", "")
                     if tmp[:1] == "*":
-                        comments += 1                 
+                        comments += 1
                     if tmp[:2] == "*/" or tmp == "*/":
                         break
             else:
                 lineCount += 1
-        print("Comment density of {} is : {:.2f}".format(filename, comments/lineCount))
+        print("Comment density of {} is : {:.2f}".format(
+            filename, comments/lineCount))
+
+def testo():
+    zab = 2
+    return 1
+
+print(len(inspect.getsourcelines(testo)[0]))
 
 dcMetric()
-
-
-
-
-
-
-
-
-
-
-
-
