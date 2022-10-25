@@ -50,6 +50,11 @@ public class Age {
         // URL for jfree is : https://api.github.com/repos/jfree/jfreechart/stats/commit_activity
 
         String r = Utils.getRequest(URL);
+
+        if (r == "{\n" + "\n" + "}"){
+            // Means Github API having troubles
+            return 0;
+        }
         int i = 0;
         for (String s : Utils.getValuesForGivenKey(r,"total")) {
             i += Integer.valueOf(s);

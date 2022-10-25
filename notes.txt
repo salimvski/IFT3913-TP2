@@ -46,6 +46,8 @@ Metrique :
   (GCP) ou bien faire un programme qui nous retourne si les le test coverage est acceptable
   pour un certain seuil.
 
+Comme la qualite des tests est difficilement mesurable, on estime que nous allons
+considerer que si nous avons un ratio >= .5, alors le test s'avere concluant.
 
 
 
@@ -121,6 +123,9 @@ Metrique :
   Il suffit de se donner un seuil, en fonction du projet, pour connaitre le taux
   d'acceptation de bugs.
 
+  Pour cette metrique, nous allons dire que le code doit contenir 0 bug reporte
+  pour etre acceptable.
+
   Afin de mesurer cette metrique, nous avons nous meme implemente la classe, en
   utilisant la docu de l'API de Github.
 
@@ -133,6 +138,9 @@ Metrique :
   du projet, on peut compter le nombre de commit dans l'annee, et aussi savoir de
   quand date le dernier commit sur la branche Main du repo, si un projet est encore
   maintenu convenablement par la communaute.
+
+  Si il y a eu au moins un commit durant l'annee derniere, alors on considere que 
+  le projet est encore maintenu et que le code n'est pas trop vieux.
 
 9) - Duplicat de code
 
