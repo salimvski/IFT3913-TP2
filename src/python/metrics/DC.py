@@ -33,10 +33,4 @@ def dcMetric():
         print("Comment density of {} is : {:.2f}".format(
             filename, comments/lineCount))
 
-def testo():
-    zab = 2
-    return 1
-
-print(len(inspect.getsourcelines(testo)[0]))
-
 dcMetric()
