@@ -23,6 +23,8 @@ def ratioMetric():
         with open(file1) as file:
             lines = file.readlines()
             # print(lines)
+            counter = 0
+            ratioSum = 0
             for line in lines:
                 if line == "END OF MAIN\n":
                     break
@@ -34,12 +36,15 @@ def ratioMetric():
                 tmp = toCheck.split("\n")[0]
                 tmp += "\n"
                 if tmp in lines:
+                    counter += 1
                     output1 = subprocess.check_output(
                         "wc -l " + tmp, shell=True)
                     output2 = subprocess.check_output(
                         "wc -l " + line, shell=True)
+                    ratioSum += int(output1[0:3])/int(output2[0:3])
                     print("The ratio for {} is {:.2f}".format(
-                        filename, int(output2[0:3])/int(output1[0:3])))
+                        filename, int(output1[0:3])/int(output2[0:3])))
+            print("The average of all ratios is {:2f}".format(ratioSum/counter))
     except:
         print("Please enter a directory")
 
