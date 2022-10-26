@@ -1,0 +1,3 @@
+# how to run
+# ./pmd-bin-6.50.0/bin/run.sh cpd --minimum-tokens <minimum diplicate size> --files <pathToFile.java>
+# source : https://pmd.sourceforge.io/pmd-5.5.2/usage/cpd-usage.html#Command_line_usage

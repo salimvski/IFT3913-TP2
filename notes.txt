@@ -17,7 +17,7 @@ Metrique :
 - Pourquoi vous pensez que chacune est appropriee et rentable
 - Comment prevoyez-vous de la mesurer
 
-1) - Ratio taille code / taille test
+1) - Ratio taille code / taille test TODO
 
   Question : Q3, Q4
 
@@ -30,7 +30,7 @@ Metrique :
   Afin de mesurer cette metrique nous allons faire le Ratio taille code / taille test
   pour class associee a la taille du fichier test.
 
-2) - Test par classe
+2) - Test par classe DONE
 
   Question: Q4, Q3
 
@@ -52,7 +52,7 @@ considerer que si nous avons un ratio >= .5, alors le test s'avere concluant.
 
 
 
-3) - Complexite cyclomatique
+3) - Complexite cyclomatique TODO
 
   Question: Q3, Q2, Q4
 
@@ -66,9 +66,9 @@ considerer que si nous avons un ratio >= .5, alors le test s'avere concluant.
   ou bien creer un script qui calcul la CC pour chaque methode de chaque class
 
 
-4) - Quantite de commentaire / taille du fichier (documentation/complexite) metric DC
+4) - Quantite de commentaire / taille du fichier (documentation/complexite) metric DC  DONE
 
-  Question: Q1, Q3
+  Question: Q1, Q3 
 
   Nous avons choisi cette metrique parce que c'est bon d'avoir des commentaires 
   permettant d'expliquer la complexite d'un code. Surtout quand un nouveau
@@ -80,7 +80,7 @@ considerer que si nous avons un ratio >= .5, alors le test s'avere concluant.
   de code plus il y a de commentaires.
 
 
-5) - taille methode/class dans chaque fichier (halstead metrics too, documentation)
+5) - taille methode/class dans chaque fichier (halstead metrics too, documentation) TODO
 
   Question: Q1
 
@@ -95,20 +95,20 @@ considerer que si nous avons un ratio >= .5, alors le test s'avere concluant.
   les tests (OTS tools, GCP, sourceMonitor). On doit obtenir une moyenne de taille
   de methode par class/package
 
-6) - Cohesion/
+6) - Couplage/ DONE
 
   Question : Q2, Q3
 
-  Nous avons choisi cette metrique car la cohesion entre les modules a un 
-  impact direct sur la qualite du code ainsi que la maintainabilite. Une haute
-  cohesion permet un maintien plus facile car cela reduit la duplication de code
-  et on peut facilement modifier le code. 
+  Nous avons choisi cette metrique car le couplage entre les modules a un 
+  impact direct sur la qualite du code ainsi que la maintainabilite. En effet,
+  nous pouvons faire des changements facilement entre les modules sans se sourceMonitor
+  de l'impact sur les autres modules du systeme. De plus, un faible couplage permet
+  d'ecrire du code plus facilement du fait que les modules ne sont pas interdependants.
 
-  Afin de mesurer cette metrique, nous pouvons utiliser des outils externes comme
-  (GCP, Jhawk). Plus la cohesion sera haute plus cela indique que le code est modulaire
-  et plus simple a maintenir.
+  Afin de mesurer cette metrique, nous allons utiliser la metrique CSEC utilisee en TP1
+  "Couplage simple entre classes" de chaque classe.
 
-7) - Issues
+7) - Issues DONE
 
   Question: Q3, Q4.
 
@@ -130,7 +130,7 @@ considerer que si nous avons un ratio >= .5, alors le test s'avere concluant.
   utilisant la docu de l'API de Github.
 
 
-8) - Age du fichier
+8) - Age du fichier DONE
 
   Question: Q3
 
