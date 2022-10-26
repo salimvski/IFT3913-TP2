@@ -1,6 +1,8 @@
 ## Tache 2
 
-Il est ideal d'essayer les scripts sous un environnement linux
+- Il est ideal d'essayer les scripts sous un environnement linux
+- Ne pas oublier de cloner le projet jfreechart
+- ``` git clone git@github.com:jfree/jfreechart.git ```
 
 # Pour les metriques Age, Issues, TPC (tests par classe)
 - Il suffit de lancer la commande ``` java main.java ```

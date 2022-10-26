@@ -1,6 +1,8 @@
 ## Tache 2
 
-Il est ideal d'essayer les scripts sous un environnement linux
+- Il est ideal d'essayer les scripts sous un environnement linux
+- Ne pas oublier de cloner le projet jfreechart
+- ``` git clone git@github.com:jfree/jfreechart.git ```
 
 # Pour les metriques Age, Issues, TPC (tests par classe)
 - Il suffit de lancer la commande ``` java main.java ```
@@ -23,6 +25,8 @@ execution : `./src/python/metrics/DC.bash `
 pour chaque fichier java dans le main (non Test), et dans la derniere ligne du fichier on obtient la moyenne de tout les rapport
 
 ## Pour la metrique qui check le duplicat de code
+
+- Nous avons utilise l'outil extern https://pmd.github.io/
 
 - Elle voit dans tout le projet jfreechart les duplicats de code entre different fichier du projet
 - Pour executer la commande il suffit de run `./src/python/metrics/duplicate_metrics/CC.bash 100
