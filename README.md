@@ -5,9 +5,9 @@
 - ``` git clone git@github.com:jfree/jfreechart.git ```
 
 # Pour les metriques Age, Issues, TPC (tests par classe)
-- Il suffit de lancer la commande ``` java -jar ./IFT3913_TP2_jar ```
-- En resultat, on obtient un fichier result.csv pour les resultats de metriques
-sur le projet jfreechart
+- Il suffit de lancer la commande ``` java -jar ./IFT3913_TP2_jar/ ```
+- Specifier le chemin du projet jfree
+- En outpout un fichier results.csv est cree avec les resultats des metriques
 
 
 ## Pour la metrique RTCTT (Ratio taille code / taille test)
