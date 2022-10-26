@@ -24,8 +24,6 @@ pour chaque fichier java dans le main (non Test), et dans la derniere ligne du f
 
 ## Pour la metrique qui check le duplicat de code
 
-- Nous avons utilise l'outil extern https://pmd.github.io/
-
 - Elle voit dans tout le projet jfreechart les duplicats de code entre different fichier du projet
 - Pour executer la commande il suffit de run `./src/python/metrics/duplicate_metrics/CC.bash 100
 - 100 represente une valeur choisie au hasard qui represente le nombre de charactere minumum 

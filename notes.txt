@@ -158,7 +158,3 @@ considerer que si nous avons un ratio >= .5, alors le test s'avere concluant.
   GCP
 
 
-
-seuil global pour RTCTT
-seuil global pour duplicate
-seuil global pour DC
