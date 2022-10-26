@@ -17,7 +17,7 @@ Metrique :
 - Pourquoi vous pensez que chacune est appropriee et rentable
 - Comment prevoyez-vous de la mesurer
 
-1) - Ratio taille code / taille test TODO
+1) - Ratio taille code / taille test DONE
 
   Question : Q3, Q4
 
